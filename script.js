@@ -31,3 +31,15 @@ function changeSlide() {
      } 
     changeSlide();
  } )
+
+ /* scrollbar code*/
+
+ const scrollbarContainer = document.querySelectorAll('.products');
+ for (const item of scrollbarContainer) {
+    item.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        item.scrollLeft += evt.deltaY;
+    })
+ }
+
+
